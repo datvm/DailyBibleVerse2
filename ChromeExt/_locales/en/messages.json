@@ -1,0 +1,74 @@
+{
+    "AppName": {
+        "message": "Daily Bible Verse"
+    },
+    "AppDesc": {
+        "message": "Your new tab is now replaced with a daily Bible verse and background image."
+    },
+    "Months": {
+        "message": "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
+    },
+    "Greetings0": {
+        "message": "Good Morning!"
+    },
+    "Greetings1": {
+        "message": "Good Afternoon!"
+    },
+    "Greetings2": {
+        "message": "Good Evening!"
+    },
+    "Greetings3": {
+        "message": "Good Night!"
+    },
+    "Settings": {
+        "message": "Settings"
+    },
+    "Background": {
+        "message": "Background"
+    },
+    "UseDefaultBg": {
+        "message": "Default Video"
+    },
+    "PickVideo": {
+        "message": "Pick Video"
+    },
+    "PickPhoto": {
+        "message": "Pick Photo"
+    },
+    "BackgroundCover": {
+        "message": "Background Cover"
+    },
+    "Opacity": {
+        "message": "Opacity"
+    },
+    "BgVideoFade": {
+        "message": "Fade at Video's end"
+    },
+    "BgVideoFadeHint": {
+        "message": "Useful for non-loop video"
+    },
+    "Clock": {
+        "message": "Clock"
+    },
+    "ClockFormat": {
+        "message": "Format"
+    },
+    "ClockSecond": {
+        "message": "Show Second"
+    },
+    "TextColor": {
+        "message": "Text Color"
+    },
+    "ShadowColor": {
+        "message": "Shadow Color"
+    },
+    "CopyTooltip": {
+        "message": "Copy this Verse"
+    },
+    "DailyVerse": {
+        "message": "Daily Verse"
+    },
+    "BibleVersion": {
+        "message": "Bible Version"
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "dailybibleverse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/datvm/DailyBibleVerse2.git",
+  "author": "Luke Vo <lukevo93@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.154"
+  }
+}

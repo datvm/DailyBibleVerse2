@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "__MSG_AppName__",
+    "description": "__MSG_AppDesc__",
+    "default_locale": "en",
+    "version": "2.0",
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "icons": {
+        "128": "img/icon-128.png",
+        "16": "img/icon-16.png",
+        "256": "img/icon-256.png",
+        "32": "img/icon-32.png",
+        "512": "img/icon-512.png",
+        "64": "img/icon-64.png"
+    },
+    "host_permissions": [
+        "https://www.biblegateway.com/votd/get/"
+    ],
+    "optional_permissions": [
+        "storage"
+    ],
+    "permissions": [
+        "unlimitedStorage"
+    ]
+}

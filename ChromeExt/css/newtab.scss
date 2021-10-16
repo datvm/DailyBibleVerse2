@@ -1,0 +1,162 @@
+@mixin fullScreen {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+@mixin fill {
+    position: absolute;
+    left:0;
+    top:0;
+    @include fullScreen();
+}
+
+:root {
+    --cover-color: white;
+    --cover-opacity: .2;
+}
+
+html, body {
+    @include fullScreen();
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+page-background {
+    @include fill();
+    z-index: -5;
+
+    > * {
+        @include fill();
+    }
+
+    video {
+        object-fit: cover;
+        z-index: -3;
+    }
+
+    .background {
+        z-index: -4;
+        display: block;
+        object-fit: cover;
+    }
+
+    .background-cover {
+        background-color: var(--cover-color);
+        opacity: var(--cover-opacity);
+        z-index: -2;
+        transition: opacity ease-out 1s;
+
+        &.full-cover {
+            background-color: black;
+            opacity: 1;
+        }
+    }
+}
+
+@mixin centerStuff() {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+}
+
+clock-panel {
+    @include centerStuff();
+    user-select: none;
+    font-size: 1.5em;
+
+    --text-color: black;
+    --shadow-color: #009dff;
+
+    color: var(--text-color);
+    text-shadow: 0 0 1rem var(--shadow-color);
+
+    .greeting {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+
+    .time {
+        font-size: 5em;
+        font-weight: lighter;
+    }
+
+    .date {
+        font-size: 1.5em;
+    }
+}
+
+bible-verse {
+    --text-color: white;
+    --shadow-color: white;
+
+    @include centerStuff();
+    color: var(--text-color);
+    text-shadow: 0 0 1rem var(--shadow-color);
+    font-size: 1.5em;
+
+    .link-ref, a {
+        text-align: end;
+        text-decoration: none;
+        color: inherit;
+        font-size: .8em;
+    }
+    
+    .btn-copy {
+        cursor: pointer;
+        text-shadow: none;
+    }
+}
+
+button.btn-settings {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background: none;
+    border: none;
+    
+    img {
+        width: 30px;
+        height: 30px;
+        transition: all ease-in-out .5s;
+
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.dialog {
+    display: none;
+    border: none;
+    background: none;
+    max-width: 100vw;
+    width: 400px;
+    right: 1rem;
+    margin: 0;
+    position: absolute;
+    bottom: 1rem;
+    padding: 0;
+    left: unset;
+    top: unset;
+    z-index: 10;
+
+    .modal-header {
+        padding: .5rem;
+    }
+
+    &.show {
+        display: block;
+    }
+}

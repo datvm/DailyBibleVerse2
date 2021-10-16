@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/newtab.min.css" />
+
+    <title>New Tab</title>
+</head>
+
+<body>
+
+    <page-background>
+        <img class="background" />
+        <video class="video" muted autoplay src="/img/default-bg.mp4" loop></video>
+        <div class="background-cover full-cover"></div>
+    </page-background>
+
+    <clock-panel>
+        <p class="greeting">Good Morning!</p>
+        <p class="time">00:00</p>
+        <p class="date">Jan 01 2021</p>
+    </clock-panel>
+
+    <bible-verse>
+        <p class="verse">For God so loved the world that he gave his one and only Son, that whoever believes in him
+            shall not perish but have eternal life.</p>
+
+        <p class="ref text-end">
+            <a class="link-ref" href="https://www.biblegateway.com/passage/?search=John+3%3A16&version=NIV">
+
+                — <span class="ref-content">John 3:16</span><br />
+                <span class="version">(<span class="version-content">New International Version</span>)</span>
+            </a>
+            <br />
+            <a id="btn-copy-verse" class="btn-copy" data-title-loc="CopyTooltip">
+                📋
+            </a>
+        </p>
+    </bible-verse>
+
+    <settings-dialog class="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" data-loc="Settings">Settings</h6>
+                    <button type="button" class="btn-close" title="Close"></button>
+            </div>
+            <div class="modal-body">
+                <fieldset>
+                    <h6 data-loc="DailyVerse"></h6>
+
+                    <div class="my-1">
+                        <div data-loc="BibleVersion"></div>
+                        <div class="row">
+                            <div class="col">
+                                <select id="cbo-bible-lang" class="form-select"></select>
+                            </div>
+                            <div class="col">
+                                <select id="cbo-bible-version" class="form-select"></select>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="row my-1">
+                        <div class="col">
+                            <div class="row align-items-center">
+                                <label for="txt-verse-color" class="col-auto" data-loc="TextColor"></label>
+                                <div class="col">
+                                    <input id="txt-verse-color" type="color" class="form-control form-control-color" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row align-items-center">
+                                <label for="txt-verse-shadow" class="col-auto" data-loc="ShadowColor"></label>
+                                <div class="col">
+                                    <input id="txt-verse-shadow" type="color" class="form-control form-control-color" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="mb-3">
+                    <h6 data-loc="Background"></h6>
+
+                    <div class="btn-group w-100 flex-wrap">
+                        <button class="btn btn-primary" data-bg="Default" data-loc="UseDefaultBg"></button>
+                        <button class="btn btn-primary" data-bg="Video" data-loc="PickVideo"></button>
+                        <button class="btn btn-primary" data-bg="Image" data-loc="PickPhoto"></button>
+                    </div>
+                </fieldset>
+
+                <fieldset class="mb-3">
+                    <h6 data-loc="BackgroundCover"></h6>
+
+                    <div>
+                        <label for="txt-bg-opacity" data-loc="Opacity"></label>
+                        <input id="txt-bg-opacity" class="form-range" type="range" min="0" max="1" step="0.01" />
+                    </div>
+
+                    <div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="chk-bg-fade">
+                            <label class="form-check-label" for="chk-bg-fade">
+                                <span data-loc="BgVideoFade"></span>
+                                (<small data-loc="BgVideoFadeHint"></small>)
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <h6 data-loc="Clock"></h6>
+
+                    <div class="my-1">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="clock-format"
+                                        id="opt-clock-format-0" data-clock-format="0">
+                                    <label class="form-check-label" for="opt-clock-format-0">
+                                        01:25
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="clock-format"
+                                        id="opt-clock-format-1" data-clock-format="1">
+                                    <label class="form-check-label" for="opt-clock-format-1">
+                                        01:25 PM
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="clock-format"
+                                        id="opt-clock-format-2" data-clock-format="2">
+                                    <label class="form-check-label" for="opt-clock-format-2">
+                                        13:25
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my-1">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="chk-clock-second">
+                            <label class="form-check-label" for="chk-clock-second">
+                                <span data-loc="ClockSecond"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row my-1">
+                        <div class="col">
+                            <div class="row align-items-center">
+                                <label for="txt-clock-color" class="col-auto" data-loc="TextColor"></label>
+                                <div class="col">
+                                    <input id="txt-clock-color" type="color" class="form-control form-control-color" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row align-items-center">
+                                <label for="txt-clock-shadow" class="col-auto" data-loc="ShadowColor"></label>
+                                <div class="col">
+                                    <input id="txt-clock-shadow" type="color" class="form-control form-control-color" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+        </div>
+    </settings-dialog>
+
+    <button class="btn-settings">
+        <img alt="Settings" src="/img/settings.png" />
+    </button>
+
+    <script defer type="module" src="/js/Utils.js"></script>
+    <script defer type="module" src="/js/NewTab.js"></script>
+</body>
+
+</html>
