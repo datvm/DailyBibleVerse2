@@ -3,7 +3,7 @@
         "message": "Daily Bible Verse"
     },
     "AppDesc": {
-        "message": "Your new tab is now replaced with a daily Bible verse and background image."
+        "message": "Your new tab is now replaced with a daily Bible verse and background video or image."
     },
     "Months": {
         "message": "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
@@ -45,7 +45,7 @@
         "message": "Fade at Video's end"
     },
     "BgVideoFadeHint": {
-        "message": "Useful for non-loop video"
+        "message": "Useful for non-looping video"
     },
     "Clock": {
         "message": "Clock"
@@ -70,5 +70,14 @@
     },
     "BibleVersion": {
         "message": "Bible Version"
+    },
+    "Oss1": {
+        "message": "This extension is an open-source project devoted to God. There isn't any tracking or advertisement attached. The source code can be freely used for any purpose (under MIT license) without having to ask my permission. Soli Deo Gloria."
+    },
+    "Oss2": {
+        "message": "For more information, please visit the project <a data-link='github'>on GitHub</a>"
+    },
+    "VerseSource": {
+        "message": "The Verse of the day data is from <a  data-link='bgm'>Bible Gateway Ministry</a>. I do not own any copyright material beside this extension code."
     }
 }

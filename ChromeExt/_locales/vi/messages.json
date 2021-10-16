@@ -1,0 +1,83 @@
+{
+    "AppName": {
+        "message": "Kinh Thánh Hàng Ngày"
+    },
+    "AppDesc": {
+        "message": "Khi mở tab mới bạn sẽ thấy một câu Kinh Thánh hàng ngày với hình nền hoặc video."
+    },
+    "Months": {
+        "message": "Th 1,Th 2,Th 3,Th 4,Th 5,Th 6,Th 7,Th 8,Th 9,Th 10,Th 11,Th 12"
+    },
+    "Greetings0": {
+        "message": "Buổi sáng an lành!"
+    },
+    "Greetings1": {
+        "message": "Buổi trưa vui vẻ!"
+    },
+    "Greetings2": {
+        "message": "Buổi tối phước hạnh!"
+    },
+    "Greetings3": {
+        "message": "Ngủ ngon bình yên!"
+    },
+    "Settings": {
+        "message": "Cài đặt"
+    },
+    "Background": {
+        "message": "Hình nền"
+    },
+    "UseDefaultBg": {
+        "message": "Video mặc định"
+    },
+    "PickVideo": {
+        "message": "Chọn Video"
+    },
+    "PickPhoto": {
+        "message": "Chọn Hình"
+    },
+    "BackgroundCover": {
+        "message": "Màn Nền"
+    },
+    "Opacity": {
+        "message": "Trong suốt"
+    },
+    "BgVideoFade": {
+        "message": "Làm mờ ở cuối video"
+    },
+    "BgVideoFadeHint": {
+        "message": "Đẹp hơn khi video không khớp ở cuối"
+    },
+    "Clock": {
+        "message": "Đồng hồ"
+    },
+    "ClockFormat": {
+        "message": "Định dạng"
+    },
+    "ClockSecond": {
+        "message": "Hiện phần giây"
+    },
+    "TextColor": {
+        "message": "Màu chữ"
+    },
+    "ShadowColor": {
+        "message": "Màu bóng"
+    },
+    "CopyTooltip": {
+        "message": "Sao chép câu Kinh Thánh"
+    },
+    "DailyVerse": {
+        "message": "Kinh Thánh Hàng Ngày"
+    },
+    "BibleVersion": {
+        "message": "Phiên bản Kinh Thánh"
+    },
+    "Oss1": {
+        "message": "Đây là dự án mã nguồn mở dâng cho Chúa. Mã nguồn có thể được tự do sử dụng cho mọi mục đích (theo license MIT) mà không cần xin phép. Soli Deo Gloria."
+    },
+    "Oss2": {
+        "message": "Để xem thêm thông tin, vui lòng xem dự án <a>tại GitHub</a>"
+    },
+    "VerseSource": {
+        "message": "Dữ liệu Kinh Thánh Hàng Ngày được lấy từ <a>Bible Gateway Ministry</a>. Tác giả không sở hữu bản quyền nào trừ mã nguồn của extension này."
+    }
+}

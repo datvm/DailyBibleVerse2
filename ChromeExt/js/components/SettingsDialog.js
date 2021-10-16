@@ -34,6 +34,16 @@ export class SettingsDialog extends HTMLElement {
         this.addLiveSettingListeners(this.txtVerseShadow, VerseSettingsChanging, "--shadow-color", () => this.onVerseShadowChanged());
         this.cboBibleLang = this.querySelector("#cbo-bible-lang");
         this.cboBibleVersion = this.querySelector("#cbo-bible-version");
+        this.setLink("github", "https://github.com/datvm/DailyBibleVerse2");
+        this.setLink("bgm", "https://www.biblegateway.com/");
+    }
+    setLink(name, url) {
+        const a = this.querySelector(`[data-link='${name}']`);
+        if (!a) {
+            return;
+        }
+        a.setAttribute("target", "_blank");
+        a.setAttribute("href", url);
     }
     async showAsync() {
         const commons = await SettingsService.getCommonSettingsAsync();

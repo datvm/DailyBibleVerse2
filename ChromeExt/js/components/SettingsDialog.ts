@@ -67,9 +67,19 @@ export class SettingsDialog extends HTMLElement {
 
         this.cboBibleLang = this.querySelector("#cbo-bible-lang");
         this.cboBibleVersion = this.querySelector("#cbo-bible-version");
+
+        // Links
+        this.setLink("github", "https://github.com/datvm/DailyBibleVerse2");
+        this.setLink("bgm", "https://www.biblegateway.com/");
     }
 
+    private setLink(name: string, url: string) {
+        const a = this.querySelector(`[data-link='${name}']`);
+        if (!a) { return; }
 
+        a.setAttribute("target", "_blank");
+        a.setAttribute("href", url);
+    }
 
     async showAsync() {
         const commons = await SettingsService.getCommonSettingsAsync();
