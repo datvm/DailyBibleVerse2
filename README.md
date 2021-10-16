@@ -1,3 +1,5 @@
+Soli Deo Gloria!
+
 An extension that replaces your New Tab page with a daily devotional Bible Verse.  With hundreds of Bible versions to select from, you can choose your favorite to display. You can also choose your favorite wallpaper as image or video.
 
 This extension is dedicated to the LORD, and does not include any type of advertisements or tracking. The source code is available freely to everyone who wants to use it for the purpose of glorifying God, the LORD Almighty.
@@ -12,4 +14,12 @@ This is the 2nd version of the extension with big changes. Therefore I publish i
 
 Feel free to fork this repository or post any issue here. Please try not to add any tracking or advertisement if you use this project code.
 
-Soli Deo Gloria!
+# Compiling
+
+This extension is developed using TypeScript so there are a few files and folders that should not be included in the final build. I included the `compile-node.js` file in the root folder of the project. You can run it with NodeJS:
+
+```
+node .\compile-node.js
+```
+
+to create a `bin` folder (so that the built folder is ignored and don't accidentally get to your Git repository) without extra unneeded files.
