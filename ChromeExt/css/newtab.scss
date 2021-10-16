@@ -156,6 +156,11 @@ button.btn-settings {
         padding: .5rem;
     }
 
+    .modal-body {
+        overflow: auto;
+        max-height: 90vh;
+    }
+
     &.show {
         display: block;
     }
