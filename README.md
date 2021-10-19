@@ -1,5 +1,13 @@
 Soli Deo Gloria!
 
+# Installing from the Stores
+
+You can install the extension from [Microsoft Edge Addon Store](https://microsoftedge.microsoft.com/addons/detail/daily-bible-verse/noofbgghmgimloiejmhokmjgaipnnijd) if you are using Microsoft Edge.
+
+The Chrome Store extension is being submitted. I will update the URL when it is approved.
+
+# About The Extension
+
 An extension that replaces your New Tab page with a daily devotional Bible Verse.  With hundreds of Bible versions to select from, you can choose your favorite to display. You can also choose your favorite wallpaper as image or video.
 
 This extension is dedicated to the LORD, and does not include any type of advertisements or tracking. The source code is available freely to everyone who wants to use it for the purpose of glorifying God, the LORD Almighty.
