@@ -4,7 +4,7 @@ Soli Deo Gloria!
 
 You can install the extension from [Microsoft Edge Addon Store](https://microsoftedge.microsoft.com/addons/detail/daily-bible-verse/noofbgghmgimloiejmhokmjgaipnnijd) if you are using Microsoft Edge.
 
-The Chrome Store extension is being submitted. I will update the URL when it is approved.
+You can also install the extension from [Google Chrome Web Store](https://chrome.google.com/webstore/detail/daily-bible-verse/jdcceghmfcinfgjmnfgfopfndpojjaed) if you are using either Microsoft Edge or Google Chrome or other Chromium browsers.
 
 # About The Extension
 
