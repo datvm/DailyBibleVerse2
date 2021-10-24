@@ -50,7 +50,7 @@ export class ClockPanel extends HTMLElement {
                 greetingIndex = 3;
             } else if (hourNum < 12) {
                 greetingIndex = 0;
-            } else if (hourNum < 6) {
+            } else if (hourNum < 18) {
                 greetingIndex = 1;
             } else {
                 greetingIndex = 2;

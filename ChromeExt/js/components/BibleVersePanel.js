@@ -72,6 +72,6 @@ export class BibleVersePanel extends HTMLElement {
         this.lblVerse.innerHTML = verse.content;
         this.lblRefContent.innerHTML = verse.display_ref;
         this.lblVersion.innerHTML = verse.version;
-        this.lnkLink.href = verse.permalink;
+        this.lnkLink.href = verse.permalink.replace(/&amp;/g, "&");
     }
 }
