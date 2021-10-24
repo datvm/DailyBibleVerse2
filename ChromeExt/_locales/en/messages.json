@@ -56,6 +56,12 @@
     "ClockSecond": {
         "message": "Show Second"
     },
+    "ShowVersion": {
+        "message": "Show Bible Version"
+    },
+    "ShowCopy": {
+        "message": "Show Copy Button"
+    },
     "TextColor": {
         "message": "Text Color"
     },

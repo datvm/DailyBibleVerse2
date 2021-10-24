@@ -65,6 +65,12 @@
     "CopyTooltip": {
         "message": "Sao chép câu Kinh Thánh"
     },
+    "ShowVersion": {
+        "message": "Hiện tên bản dịch"
+    },
+    "ShowCopy": {
+        "message": "Hiện nút Sao chép"
+    },
     "DailyVerse": {
         "message": "Kinh Thánh Hàng Ngày"
     },

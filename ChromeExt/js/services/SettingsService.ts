@@ -36,6 +36,7 @@ export class SettingsService {
         if (settings.clockShadowColor == undefined) { settings.clockShadowColor = "#009DFF"; }
 
         if (settings.showCopyButton == undefined) { settings.showCopyButton = true; }
+        if (settings.showBibleVersion == undefined) { settings.showBibleVersion = true; }
         if (settings.bibleVersion == undefined) { settings.bibleVersion = "NIV"; }
         if (settings.verseTextColor == undefined) { settings.verseTextColor = "#FFFFFF"; }
         if (settings.verseShadowColor == undefined) { settings.verseShadowColor = "#FFFFFF"; }
@@ -139,6 +140,7 @@ export interface ICommonSettings {
     clockTextColor?: string;
     clockShadowColor?: string;
 
+    showBibleVersion?: boolean;
     showCopyButton?: boolean;
     bibleVersion?: string;
     verseTextColor?: string;

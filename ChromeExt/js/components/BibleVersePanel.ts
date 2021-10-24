@@ -11,6 +11,7 @@ export class BibleVersePanel extends HTMLElement {
     lblVerse = this.querySelector(".verse");
     lnkLink = this.querySelector<HTMLAnchorElement>(".link-ref");
     lblRefContent = this.querySelector(".ref-content");
+    lblVersionContainer = this.querySelector(".version");
     lblVersion = this.querySelector(".version-content");
     btnCopy = this.querySelector("#btn-copy-verse");
 
@@ -30,6 +31,7 @@ export class BibleVersePanel extends HTMLElement {
         const commons = await SettingsService.getCommonSettingsAsync();
 
         this.btnCopy.classList.toggle("d-none", !commons.showCopyButton);
+        this.lblVersionContainer.classList.toggle("d-none", !commons.showBibleVersion);
         this.updateUI(commons);
 
         await this.loadVerseAsync(commons.bibleVersion);

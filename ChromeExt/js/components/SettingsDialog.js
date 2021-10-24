@@ -34,8 +34,26 @@ export class SettingsDialog extends HTMLElement {
         this.addLiveSettingListeners(this.txtVerseShadow, VerseSettingsChanging, "--shadow-color", () => this.onVerseShadowChanged());
         this.cboBibleLang = this.querySelector("#cbo-bible-lang");
         this.cboBibleVersion = this.querySelector("#cbo-bible-version");
+        this.chkShowVersion = this.querySelector("#chk-show-version");
+        this.chkShowVersion.addEventListener("change", () => this.onShowVersionChanged());
+        this.chkShowCopy = this.querySelector("#chk-show-copy");
+        this.chkShowCopy.addEventListener("change", () => this.onShowCopyChanged());
         this.setLink("github", "https://github.com/datvm/DailyBibleVerse2");
         this.setLink("bgm", "https://www.biblegateway.com/");
+    }
+    async onShowVersionChanged() {
+        const value = this.chkShowVersion.checked;
+        await SettingsService.setCommonSettingsAsync({
+            showBibleVersion: value,
+        });
+        await this.dispatchEv(VerseSettingsChanged, 0);
+    }
+    async onShowCopyChanged() {
+        const value = this.chkShowCopy.checked;
+        await SettingsService.setCommonSettingsAsync({
+            showCopyButton: value,
+        });
+        await this.dispatchEv(VerseSettingsChanged, 0);
     }
     setLink(name, url) {
         const a = this.querySelector(`[data-link='${name}']`);
@@ -55,6 +73,8 @@ export class SettingsDialog extends HTMLElement {
         this.txtVerseShadow.value = commons.verseShadowColor;
         this.chkClockSecond.checked = commons.clockShowSecond;
         this.querySelector(`[data-clock-format="${commons.clockFormat}"]`).checked = true;
+        this.chkShowVersion.checked = commons.showBibleVersion;
+        this.chkShowCopy.checked = commons.showCopyButton;
         await this.initBibleSelectorsAsync(commons.bibleVersion);
         this.classList.add("show");
     }

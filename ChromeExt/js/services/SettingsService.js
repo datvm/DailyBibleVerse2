@@ -40,6 +40,9 @@ export class SettingsService {
         if (settings.showCopyButton == undefined) {
             settings.showCopyButton = true;
         }
+        if (settings.showBibleVersion == undefined) {
+            settings.showBibleVersion = true;
+        }
         if (settings.bibleVersion == undefined) {
             settings.bibleVersion = "NIV";
         }

@@ -22,6 +22,8 @@ export class SettingsDialog extends HTMLElement {
 
     cboBibleLang: HTMLSelectElement;
     cboBibleVersion: HTMLSelectElement;
+    chkShowVersion: HTMLInputElement;
+    chkShowCopy: HTMLInputElement;
 
     constructor() {
         super();
@@ -65,12 +67,37 @@ export class SettingsDialog extends HTMLElement {
         this.addLiveSettingListeners(this.txtVerseShadow, VerseSettingsChanging,
             "--shadow-color", () => this.onVerseShadowChanged());
 
+        // Verse
         this.cboBibleLang = this.querySelector("#cbo-bible-lang");
         this.cboBibleVersion = this.querySelector("#cbo-bible-version");
+
+        this.chkShowVersion = this.querySelector("#chk-show-version");
+        this.chkShowVersion.addEventListener("change", () => this.onShowVersionChanged());
+
+        this.chkShowCopy = this.querySelector("#chk-show-copy");
+        this.chkShowCopy.addEventListener("change", () => this.onShowCopyChanged());
 
         // Links
         this.setLink("github", "https://github.com/datvm/DailyBibleVerse2");
         this.setLink("bgm", "https://www.biblegateway.com/");
+    }
+
+    private async onShowVersionChanged() {
+        const value = this.chkShowVersion.checked;
+        await SettingsService.setCommonSettingsAsync({
+            showBibleVersion: value,
+        });
+
+        await this.dispatchEv(VerseSettingsChanged, 0);
+    }
+
+    private async onShowCopyChanged() {
+        const value = this.chkShowCopy.checked;
+        await SettingsService.setCommonSettingsAsync({
+            showCopyButton: value,
+        });
+
+        await this.dispatchEv(VerseSettingsChanged, 0);
     }
 
     private setLink(name: string, url: string) {
@@ -94,6 +121,8 @@ export class SettingsDialog extends HTMLElement {
         this.chkClockSecond.checked = commons.clockShowSecond;
         this.querySelector<HTMLInputElement>(`[data-clock-format="${commons.clockFormat}"]`).checked = true;
 
+        this.chkShowVersion.checked = commons.showBibleVersion;
+        this.chkShowCopy.checked = commons.showCopyButton;
         await this.initBibleSelectorsAsync(commons.bibleVersion);
 
         this.classList.add("show");
